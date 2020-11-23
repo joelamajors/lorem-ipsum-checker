@@ -9,5 +9,5 @@ Navigate into the directory<br>
 
 Add your urls to urls.txt file
 
-Run the script:
+Run the script:<br>
 `python lorem-checker.py`
