@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import re
 import requests
 
+links = []
+
 #opens urls
 f = open('urls.txt', 'r')
 
@@ -19,7 +21,9 @@ for line in f:
 
     # If text has has Lorem Ipsum, 
     if soup.find(string=re.compile("lorem",re.IGNORECASE)):
-        print('\nThese links have lorem ipsum: ')
-        print(line)
+        links.append(line)
+    
+print("These links have Lorem Ipsum:")
+print('\n'.join(map(str,links)))
 
 f.close()
