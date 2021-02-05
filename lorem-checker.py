@@ -12,8 +12,6 @@ for line in f:
     # Removing new line from lines
     line = line.rstrip('\n')
 
-    # print("\nChecking " + line)
-
     # Go to URL
     req = requests.get(line)
     soup = BeautifulSoup(req.content, 'html.parser')
